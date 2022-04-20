@@ -3,14 +3,9 @@ import Header from "../src/components/Header";
 import Navbar from "../src/components/Navbar";
 import Articles from "./components/Article";
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import Article from "./components/Article";
 
 function App() {
-  // set a current topic in state????
-  // const [topic, setTopic] = useState("All");
-  // console.log(topic);
-
   return (
     <div className="App">
       <Header />
