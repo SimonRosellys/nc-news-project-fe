@@ -1,10 +1,24 @@
 .App {
   text-align: center;
+  margin: 5px;
 }
 
 .Article {
   text-align: center;
-  border: 2px double #000000;
+  border: 2px double #48ff00;
+  margin: 5px;
+}
+
+.Header {
+  text-align: center;
+  border: 2px double #fd0909;
+  margin: 5px;
+}
+
+.Navbar {
+  text-align: center;
+  border: 2px double #0168f9;
+  margin: 5px;
 }
 
 .App-logo {
