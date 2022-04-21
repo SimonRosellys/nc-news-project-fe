@@ -12,8 +12,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <section className="topic-list">
-      <h1>Topics</h1>
+    <section className="Navbar">
+      <div>
+        <Link to={"/"}>
+          <h2>topics</h2>
+        </Link>
+      </div>
       <nav>
         {topics.map(({ slug }) => {
           return (

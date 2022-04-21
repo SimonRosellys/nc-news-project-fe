@@ -2,9 +2,7 @@ import "./App.css";
 import Header from "../src/components/Header";
 import Navbar from "../src/components/Navbar";
 import Articles from "./components/Article";
-import { Routes, Route, useParams } from "react-router-dom";
-import { getTopics } from "./utils/api";
-import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Article from "./components/Article";
 
 function App() {
