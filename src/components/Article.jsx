@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { getArticlesByTopic, getArticleById } from "../utils/api";
+import { getArticlesByTopic } from "../utils/api";
 import { useEffect, useState } from "react";
 
 const Article = () => {
@@ -29,7 +29,6 @@ const Article = () => {
               <h1>{article.title}</h1>
               <p>Topic: {article.topic}</p>
               <p>Author: {article.author}</p>
-              {/* <p>{article.body}</p> */}
               <p>Votes = {article.votes}</p>
               <p> Number of comments = {article.comment_count}</p>
             </div>
