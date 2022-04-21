@@ -14,7 +14,8 @@ const Article = () => {
     });
   }, [topic_slug]);
 
-  if (isLoading) return <p>Don't have a cow man, your data is on it's way</p>;
+  if (isLoading) return <p>Don't have a cow man, your news is on it's way</p>;
+
   return (
     <section className="Article">
       <nav>
@@ -22,24 +23,17 @@ const Article = () => {
         {articles.map((article) => {
           return (
             <div className="Article" key={article.article_id}>
-              <Link to={"/article/:article_id"}>
-                <button
-                  onClick={() => {
-                    getArticleById(article.article_id);
-                  }}
-                >
-                  More...
-                </button>
+              <Link to={`/article/${article.article_id}`}>
+                <p>Click for more...</p>
               </Link>
               <h1>{article.title}</h1>
               <p>Topic: {article.topic}</p>
               <p>Author: {article.author}</p>
-              <p>{article.body}</p>
+              {/* <p>{article.body}</p> */}
               <p>Votes = {article.votes}</p>
               <p> Number of comments = {article.comment_count}</p>
             </div>
           );
-          // }
         })}
       </nav>
     </section>

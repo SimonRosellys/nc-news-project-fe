@@ -24,8 +24,6 @@ export const getArticlesByTopic = (topic) => {
 
 export const getArticleById = (article_id) => {
   return newsApi.get(`/articles/${article_id}`).then(({ data }) => {
-    // THIS IS THE FULL ARTICLE OBJECT
-    console.log(data.article);
     return data.article;
   });
 };
