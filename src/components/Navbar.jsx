@@ -15,7 +15,7 @@ const Navbar = () => {
     <section className="Navbar">
       <div>
         <Link to={"/"}>
-          <h2>topics</h2>
+          <h2>ALL ARTICLES</h2>
         </Link>
       </div>
       <nav>
