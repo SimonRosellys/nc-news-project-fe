@@ -2,8 +2,8 @@ import "./App.css";
 import Header from "../src/components/Header";
 import Navbar from "../src/components/Navbar";
 import { Routes, Route } from "react-router-dom";
-import Article from "./components/Article";
-import FullArticle from "./components/FullArticle";
+import Article from "./components/Article-List";
+import ArticleSingle from "./components/Article-Single";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Article />} />
         <Route path="/topics/:topic_slug" element={<Article />} />
-        <Route path="/article/:article_id" element={<FullArticle />} />
+        <Route path="/article/:article_id" element={<ArticleSingle />} />
       </Routes>
     </div>
   );
