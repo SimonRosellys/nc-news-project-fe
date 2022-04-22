@@ -4,7 +4,9 @@ import { getArticleById } from "../utils/api";
 import Votes from "./Votes";
 import Comments from "./Comments";
 
-const ArticleSingle = () => {
+const ArticleSingle = (props) => {
+  const { username } = props;
+
   const params = useParams();
   const id = params.article_id;
   const [article, setArticle] = useState({});
@@ -26,7 +28,7 @@ const ArticleSingle = () => {
       <Votes votes={article.votes} article_id={article.article_id} />
       <p>Number of Comments: {article.comment_count}</p>
 
-      <Comments />
+      <Comments username={username} />
     </section>
   );
 };

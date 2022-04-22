@@ -19,8 +19,6 @@ const Votes = ({ votes, article_id }) => {
     });
   };
 
-  //
-
   return (
     <div>
       <p>Votes: {votes + optimisticVotes}</p>

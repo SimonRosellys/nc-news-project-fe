@@ -1,8 +1,10 @@
 import { getComments } from "../utils/api";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import AddComent from "./Post-Comment";
 
-const Comments = () => {
+const Comments = (props) => {
+  const { username } = props;
   const params = useParams();
   const id = params.article_id;
   const [comments, setComments] = useState([]);
@@ -13,8 +15,13 @@ const Comments = () => {
     });
   }, [id]);
 
+  if (comments === [undefined]) {
+    return <h1>There are no comments on this article:</h1>;
+  }
   return (
     <section className="Article">
+      <h1>Add a comment:</h1>
+      <AddComent setComments={setComments} username={username} />
       <h1>Comments:</h1>
       {comments.map((comment) => {
         return (
