@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 const AddComent = ({ setComments, username }) => {
+  const [enteredText, setEnteredText] = useState("");
   const [newComment, setNewComment] = useState("");
   const params = useParams();
   const id = params.article_id;
@@ -29,8 +30,8 @@ const AddComent = ({ setComments, username }) => {
           return newComments;
         });
       });
+    setNewComment("");
   };
-  //   if (newComment === "") return <p>Please add a comment</p>;
   return (
     <form onSubmit={handleSubmit}>
       <textarea

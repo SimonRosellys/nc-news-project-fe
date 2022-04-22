@@ -44,15 +44,17 @@ const Comments = (props) => {
             <p>Author: {comment.author}</p>
             <p>Date: {comment.created_at}</p>
             <p>Number of Votes: {comment.votes}</p>
-            <button
-              onClick={() => {
-                if (comment.author === username) {
-                  deleteComment(comment.comment_id);
-                }
-              }}
-            >
-              Delete
-            </button>
+            {comment.author === username && (
+              <button
+                onClick={() => {
+                  if (comment.author === username) {
+                    deleteComment(comment.comment_id);
+                  }
+                }}
+              >
+                Delete
+              </button>
+            )}
           </div>
         );
       })}
