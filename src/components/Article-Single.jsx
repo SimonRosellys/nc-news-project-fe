@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticleById } from "../utils/api";
 import Votes from "./Votes";
+import Comments from "./Comments";
 
 const ArticleSingle = () => {
   const params = useParams();
@@ -24,6 +25,8 @@ const ArticleSingle = () => {
       <p>Date: {article.created_at}</p>
       <Votes votes={article.votes} article_id={article.article_id} />
       <p>Number of Comments: {article.comment_count}</p>
+
+      <Comments />
     </section>
   );
 };

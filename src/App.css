@@ -9,7 +9,12 @@
   margin: 5px;
 }
 
-.Header {
+.Comment {
+  text-align: center;
+  border: 2px double #33bbff;
+  margin: 5px;
+}
+Comment .Header {
   text-align: center;
   border: 2px double #fd0909;
   margin: 5px;
