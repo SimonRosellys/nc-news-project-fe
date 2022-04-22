@@ -15,6 +15,20 @@ const Comments = (props) => {
     });
   }, [id]);
 
+  const deleteComment = (comment_id) => {
+    setComments((currComments) => {
+      return currComments.filter(
+        (comment) => comment.comment_id !== comment_id
+      );
+    });
+    fetch(
+      `https://nc-news-project-sr.herokuapp.com/api/comments/${comment_id}`,
+      {
+        method: "DELETE",
+      }
+    ).then(() => {});
+  };
+
   if (comments === [undefined]) {
     return <h1>There are no comments on this article:</h1>;
   }
@@ -30,6 +44,15 @@ const Comments = (props) => {
             <p>Author: {comment.author}</p>
             <p>Date: {comment.created_at}</p>
             <p>Number of Votes: {comment.votes}</p>
+            <button
+              onClick={() => {
+                if (comment.author === username) {
+                  deleteComment(comment.comment_id);
+                }
+              }}
+            >
+              Delete
+            </button>
           </div>
         );
       })}
