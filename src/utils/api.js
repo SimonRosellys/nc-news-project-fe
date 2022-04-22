@@ -27,3 +27,9 @@ export const getArticleById = (article_id) => {
     return data.article;
   });
 };
+
+// export const AddVotes = (article_id) => {
+//   return newsApi.patch(`/articles/${article_id}`{
+//      inc_votes: 1
+//   });
+// };
